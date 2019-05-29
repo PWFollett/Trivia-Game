@@ -21,42 +21,42 @@ var questions = [{
   question: "What fruit will you find floating in the drink called a Manhattan?",
   answers: ["Lemon", "Lime", "Cherry", "Olive"],
   correctAnswer: "Cherry",
-  image:""
+  
 }, {
   question: "What does a cubra libra have that a rum and coke does not?",
   answers: ["A lime", "Whiskey", "Diet Coke", "Grenadine"],
   correctAnswer: "A lime",
-  image:""
+  
 }, {
   question: "What kind of food is Chambord?",
   answers: ["Minty Flavored Liquor", "Coffee Liquor", "Orange Liquor", "Black Raspberry Liquor"],
   correctAnswer: "Black Raspberry Liquor",
-  image:""
+  
 }, {
   question: "What drink has 4/5 tequila and 1/5 tabasco sauce?",
   answers: ["A dry Winter", "Prairie Fire", "Cool Breeze", "Hot Shot"],
   correctAnswer: "Prairie Fire",
-  image:""
+  
 }, {
   question: "What is in the shot Liquid Cocaine?",
   answers: ["Blackhouse", "Vodka", "Goldschlager", "Peach Schnapps"],
   correctAnswer: "Goldschlager",
-  image:""
+  
 }, {
   question: "What do you get when you mix orange juice, vanilla and vodka?",
   answers: ["Mad Vodka", "Russian Rolaid", "Tummy Fixer", "Phillips Screwdriver"],
   correctAnswer: "Phillips Screwdriver",
-  image:""
+  
 }, {
   question: "Mixing Scotch whisky and Drambuie will produce which drink?",
   answers: ["Old Fashioned", "Rob Roy", "Rusty Nail", "Dry Manhattan"],
   correctAnswer: "Rusty Nail",
-  image:""
+  
 }, {
   question: "What product is rum distilled from?",
   answers: ["Orange Peels", "Mashed Grapes and Berries", "Sugar Cane", "Douglas Firs"],
   correctAnswer: "Sugar Cane",
-  image:""
+  
 }];
 
 var gamePlay = {
@@ -70,7 +70,7 @@ var gamePlay = {
         $('#counter-number').html(gamePlay.counter);
 
         if (gamePlay.counter === 0){
-            console.log("TIME'S UP")
+          panel.append('<br> Times Up');
             gamePlay.timeUp();
         }
     }   
