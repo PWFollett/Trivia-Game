@@ -120,11 +120,12 @@ panel.append('<br><button id="start-over">Start Over?</button>');
 }
 
  var answeredIncorrectly = function() {
-  gamePlay.incorrect++;
-  gamePlay.currentQuestion ++;
-  clearInterval(counterStart);
-  panel.html('<h2>Nope!</h2>');
   panel.append('<h3>The Correct Answer was: ' + questions[gamePlay.currentQuestion].correctAnswer + '</h3>');
+  gamePlay.incorrect++;
+  gamePlay.currentQuestion++;
+  clearInterval(counterStart);
+  panel.append('<h2>Nope!</h2>');
+  
  
 
   if (gamePlay.currentQuestion > questions.length - 1){
@@ -139,7 +140,7 @@ panel.append('<br><button id="start-over">Start Over?</button>');
 }
   var answeredCorrectly = function() {
   clearInterval(counterStart);
-  gamePlay.currentQuestion ++;
+  gamePlay.currentQuestion++;
   gamePlay.correct++;
   panel.html('<h2>Correct!</h2>');
   console.log("GAMEPLAY", gamePlay)
@@ -147,10 +148,10 @@ panel.append('<br><button id="start-over">Start Over?</button>');
   if (gamePlay.currentQuestion > questions.length - 1){
     setTimeout(function(){
       results()
-    }, 3 * 1000);
+    }, 2 * 1000);
   } else {
     setTimeout(function(){
       loadQuestion()
-    }, 3 * 1000);
+    }, 2 * 1000);
   }
 }
